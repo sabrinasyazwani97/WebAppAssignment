@@ -1,0 +1,56 @@
+body{
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  margin: 3em auto 1em auto;
+}
+
+table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  align-self: center;
+}
+
+h2, div, p{
+  text-align: center;
+  padding:  0em 0.5em 0.5em 0.5em;
+}
+
+td, tr{
+  /*border-style: dotted;*/
+  vertical-align: text-top;
+  width: 20em;
+  margin: 0em 1em 1em 1em;
+}
+
+button{
+  margin-top: 1em;
+  background-color: #FFDCBA;
+  color: white;
+  border: 1px solid #D6DBDF;
+  height: 3em;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+button:hover{
+  color: black;
+  border-color: black;
+}
+
+text#promo{
+  color: #FFDCBA;
+  font-weight: bold;
+}
+
+text#price{
+  font-weight: bold;
+}
+
+text#oldprice{
+  text-decoration: line-through;
+  font-size: 0.8em;
+  font-weight: bold;
+}
