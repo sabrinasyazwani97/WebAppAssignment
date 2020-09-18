@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Scarf4u | Ladies Trends No. 1</title>
+  <title>Sarung Collection | Scarf4u</title>
   <link href="sarung.css" rel="stylesheet">
 </head>
 
