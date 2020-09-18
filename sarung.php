@@ -33,10 +33,10 @@
         <td><text id="price">RM49.00</text></td>
       </tr>
       <tr>
-        <td><button type="button" name="sarung1" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung2" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung3" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung4" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung1" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung2" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung3" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung4" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
       </tr>
     </table></br>
 
@@ -60,10 +60,10 @@
         <td><text id="price"><text id="oldprice"/>RM49.00 </text><text id="promo"> RM44.10</text></text></td>
       </tr>
       <tr>
-        <td><button type="button" name="sarung5" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung6" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung7" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung8" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung5" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung6" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung7" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung8" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
       </tr>
     </table></br>
 
@@ -87,10 +87,10 @@
         <td><text id="price">RM90.00</text></td>
       </tr>
       <tr>
-        <td><button type="button" name="sarung9" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung10" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung11" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung12" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung9" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung10" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung11" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung12" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
       </tr>
     </table></br>
 
@@ -114,10 +114,10 @@
         <td><text id="price">RM59.00</text></td>
       </tr>
       <tr>
-        <td><button type="button" name="sarung13" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung14" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung15" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung16" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung13" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung14" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung15" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung16" onclick="document.location='cart.php'">ADD TO CART</button></td>
       </tr>
     </table></br>
 
@@ -141,10 +141,10 @@
         <td><text id="price">RM49.00</text></td>
       </tr>
       <tr>
-        <td><button type="button" name="sarung17" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung18" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung19" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="button" name="sarung20" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung17" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung18" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung19" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung20" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
       </tr>
     </table></br>
   </div>
