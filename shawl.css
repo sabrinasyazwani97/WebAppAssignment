@@ -1,0 +1,59 @@
+
+div {
+	font-family: Helvetica;
+}
+
+img {
+	width: 250px;
+}
+
+.shawl{
+	margin: 70px 0;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 25px;
+}
+
+.col {
+	size: 30%;
+	min-width: 250px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.title {
+	font-family: Arial;
+	text-align: center;
+	margin: 0 auto 8px;
+	position: relative;
+	line-height: 60px;
+}
+
+h3, p {
+	text-align: center;
+	font-weight: normal;
+}
+
+h4 {
+	text-align: center;
+}
+
+button{
+  margin-top: 0.5em;
+  background-color: #FFDCBA;
+  color: white;
+  border: 1px solid #D6DBDF;
+  height: 3em;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+button:hover{
+  color: black;
+  border-color: black;
+}
