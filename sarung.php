@@ -150,9 +150,8 @@
       </tr>
     </table></br>
   </div>
-
-  <?php include 'scarf-footer.inc.php';?>
 </article>
+  <?php include 'scarf-footer.inc.php';?>
 </body>
 </html>
 
