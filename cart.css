@@ -1,6 +1,6 @@
-body{
+body, article{
   font-family: Arial, sans-serif;
-  margin: 3em auto 1em auto;
+  margin: 3em 5em 1em 5em;
   font-size: 100%;
   text-align: center;
 }
@@ -15,7 +15,75 @@ button{
   font-weight: bold;
 }
 
+button.checkoutBtn{
+  float: right;
+}
+
+td button{
+  align-items: stretch;
+}
+
+td input{
+  border-style: 1px solid #D6DBDF;
+  width: 100%;
+  font-size: 100%
+}
+
 button:hover{
   color: black;
   border-color: black;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70em;
+  padding: 0em 5em 1.5em 5em;
+  align-self: center;
+}
+
+th{
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-top-style: hidden;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  border-top-style: hidden;
+  text-align: left;
+  font-size: 1em;
+}
+
+tr{
+  height: 4em;
+}
+
+td#col1{
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 1px solid #D6DBDF;
+  text-align: left;
+  font-size: 1em;
+}
+
+td#col2{
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 1px solid #D6DBDF;
+  text-align: right;
+  font-size: 1em;
+}
+
+td#col_total{
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  border-bottom: 1px solid #D6DBDF;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#blank{
+  border-style: hidden;
+  padding: 1em;
 }
