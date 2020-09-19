@@ -1,0 +1,99 @@
+body .actions {
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  margin: 3em auto 1em auto;
+}
+
+h2, div, p{
+  text-align: center;
+  padding:  0em 0.5em 0.5em 0.5em;
+}
+
+
+* {
+   box-sizing: border-box;
+}
+.alignRow {
+ 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  align-self: center;
+}
+.alignRow2 {
+ 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  align-self: center;
+}
+
+.alignRow3{
+ 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  align-self: center;
+}
+
+.alignRow4 {
+ 
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em;
+  align-self: center;
+}
+
+
+.imageColumn {
+  float: left;
+  width: 20%;
+  padding: 10px;
+ 
+}
+
+.imageColumn2 {
+   float: right;
+   width: 20%;
+   padding: 10px;
+}
+
+.imageColumn3 {
+   float: left;
+   width: 20%;
+   padding: 10px;
+}
+.imageColumn4 {
+   float: left;
+   width: 20%;
+   padding: 10px;
+}
+
+
+button{
+  margin-top: 1em;
+  background-color: #FFDCBA;
+  color: white;
+  border: 1px solid #D6DBDF;
+  height: 3em;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+button:hover{
+  color: black;
+  border-color: black;
+}
+#site-footer {
+height: 130px;
+margin-top:1800px;
+background: #FFDCBA;
+}
+
+
+#footer1{
+margin-left:2%;
+float:left;
+
+}
