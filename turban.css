@@ -38,32 +38,23 @@ h2, div, p{
   align-self: center;
 }
 
-.alignRow4 {
- 
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2em;
-  align-self: center;
-}
-
-
 .imageColumn {
   float: left;
-  width: 33.33%;
-  padding: 30px;
+  width: 20%;
+  padding: 10px;
  
 }
 
 .imageColumn2 {
-   float: left;
-   width: 33.33%;
-   padding: 30px;
+   float: right;
+   width: 20%;
+   padding: 10px;
 }
 
 .imageColumn3 {
-   float: right;
-   width: 33.33%;
-   padding: 30px;
+   float: left;
+   width: 20%;
+   padding: 10px;
 }
 
 button{
