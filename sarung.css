@@ -4,10 +4,12 @@ article.sarung{
 
 .all_image{
   padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .one_image{
   padding-bottom: 20px;
+  padding-left: 0;
 }
 
 #sarung-title{
@@ -18,17 +20,16 @@ article.sarung{
 
 .sarung_table{
   text-align: center;
-  padding: auto 2em 1.5em 2em;
   align-self: center;
   table-layout: auto;
-  max-width: 2000px;
+  max-width: 1000px;
 	margin: 0 auto;
 }
 
 td, tr{
   vertical-align: text-top;
   width: 20em;
-  padding: 0em 1em 0.5em 1em;
+
 }
 
 .addCartBtn{
