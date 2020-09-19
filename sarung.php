@@ -2,18 +2,20 @@
 <head>
   <meta charset="utf-8">
   <title>Sarung Collection | Scarf4u</title>
-  <link href="sarung.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="sarung.css" rel="stylesheet"/>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 </head>
 
 <body>
+  <?php include 'scarf-header.inc.php';?>
+<article class="sarung">
 
-<header>
-      <?php include 'scarf-header.inc.php' ?>
-  </header>
-
-  <h2>SARUNG</h2>
   <div class="all_image">
-    <table>
+    <h1 id="sarung-title">SARUNG COLLECTION</h1>
+    <table class="sarung_table">
       <tr>
         <td><div class="one_image"><img src="Image/Sarung/1.jpg" title="HAWWA SCARF – Instant Aliyah Kids Sarung Soft Blue" id="img"></div></td>
         <td><div class="one_image"><img src="Image/Sarung/2.jpg" title="HAWWA SCARF – Instant Aliyah Kids Sarung Black" id="img"></div></td>
@@ -40,7 +42,7 @@
       </tr>
     </table></br>
 
-    <table>
+    <table class="sarung_table">
       <tr>
         <td><div class="one_image"><img src="Image/Sarung/5.jpg" title="HAWWA SCARF – Instant Aliyah Kids Sarung Navy Blue" id="img"></div></td>
         <td><div class="one_image"><img src="Image/Sarung/6.jpg" title="HAWWA SCARF – Instant Aliyah Adult Bawal Brown" id="img"></div></td>
@@ -67,7 +69,7 @@
       </tr>
     </table></br>
 
-    <table>
+    <table class="sarung_table">
       <tr>
         <td><div class="one_image"><img src="Image/Sarung/9.jpg" title="MAJEEDA – AUFA XXL TURQUOISE" id="img"></div></td>
         <td><div class="one_image"><img src="Image/Sarung/10.jpg" title="Voila Maxi Chiffon Rombo – C49" id="img"></div></td>
@@ -94,7 +96,7 @@
       </tr>
     </table></br>
 
-    <table>
+    <table class="sarung_table">
       <tr>
         <td><div class="one_image"><img src="Image/Sarung/13.jpg" title="Voila Printed Chiffon Aztek" id="img"></br></div></br></td>
         <td><div class="one_image"><img src="Image/Sarung/14.jpg" title="AIN WARDAH – IZARA EXPRESS HIJAB YELLOW" id="img"></div></td>
@@ -114,14 +116,14 @@
         <td><text id="price">RM59.00</text></td>
       </tr>
       <tr>
-        <td><button type="submit" name="sarung13" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="submit" name="sarung14" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="submit" name="sarung15" onclick="document.location='cart.php'">ADD TO CART</button></td>
-        <td><button type="submit" name="sarung16" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung13" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung14" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung15" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
+        <td><button type="submit" name="sarung16" class="addCartBtn" onclick="document.location='cart.php'">ADD TO CART</button></td>
       </tr>
     </table></br>
 
-    <table>
+    <table class="sarung_table">
       <tr>
         <td><div class="one_image"><img src="Image/Sarung/17.jpg" title="IZARA EXPRESS HIJAB MERAH BATA – D04" id="img"></div></td>
         <td><div class="one_image"><img src="Image/Sarung/18.jpg" title="IZARA EXPRESS HIJAB FUSCHIA – D04" id="img"></div></td>
@@ -149,8 +151,8 @@
     </table></br>
   </div>
 
-  <footer>
-      <?php include 'scarf-footer.inc.php' ?>
-  </footer>
+  <?php include 'scarf-footer.inc.php';?>
+</article>
 </body>
 </html>
+
