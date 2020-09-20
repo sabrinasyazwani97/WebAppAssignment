@@ -32,7 +32,7 @@
 				<h1>Modest & Stylish</h1>
 				<h3>Urban-chic Look</h3>
 				<div class="horizontal-line-black"></div>
-				<h4><a href="#" class="text-shop">Shop Ladies</a></h4>
+				<h4><a href="bawal.php" class="text-shop">Shop Ladies</a></h4>
 			</div>
 			
 		</div>
@@ -46,7 +46,7 @@
 				<h1>Sleek & Simple</h1>
 				<h3>Comfortable All Day Long</h3>
 				<div class="horizontal-line-white"></div>
-				<h4><a href="#" class="text-shop">Shop Kids</a></h4>
+				<h4><a href="sarung.php" class="text-shop">Shop Kids</a></h4>
 			</div>
 			
 			<div class="main-grid-item-4"></div>
