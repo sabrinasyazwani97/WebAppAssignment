@@ -32,7 +32,7 @@
 				<h1>Modest & Stylish</h1>
 				<h3>Urban-chic Look</h3>
 				<div class="horizontal-line-black"></div>
-				<h4><a href="bawal.php" class="text-shop">Shop Ladies</a></h4>
+				<h4><a href="niqab.php" class="text-shop">Shop Ladies</a></h4>
 			</div>
 			
 		</div>
@@ -64,7 +64,7 @@
 		
 			<div class="new-arrivals-grid">
 			
-				<a href="#" class="na-item-1">
+				<a href="bawal.php" class="na-item-1">
 					<div class="na-pic">
 						<img src="images/bawal1.jpg" />
 					</div>
@@ -77,7 +77,7 @@
 					</div>
 				</a>
 				
-				<a href="#" class="na-item-2">
+				<a href="shawl.php" class="na-item-2">
 					<div class="na-pic">
 						<img src="images/shawl1.jpg" />
 					</div>
@@ -90,7 +90,7 @@
 					</div>
 				</a>
 				
-				<a href="#" class="na-item-3">
+				<a href="turban.php" class="na-item-3">
 					<div class="na-pic">
 						<img src="images/turban1.jpg" />
 					</div>
@@ -117,7 +117,7 @@
 			<h2>Get on the List</h2>
 			<h4>and be the first to shop new arrivals and exclusive promotions</h4>
 			
-			<form class="el-form" action="/form.php">
+			<form class="el-form" action="register.php">
 				<input type="email" name="email" placeholder="Email Address" required />
 				<input type="submit" value="Subscribe Now" />
 			</form>
