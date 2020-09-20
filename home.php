@@ -11,7 +11,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 
-<title>Fashion</title>
+<title>Scarf4u | Home</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
 				<h1>Modest & Stylish</h1>
 				<h3>Urban-chic Look</h3>
 				<div class="horizontal-line-black"></div>
-				<h4><a href="#" class="text-shop">Shop Scarf</a></h4>
+				<h4><a href="#" class="text-shop">Shop Ladies</a></h4>
 			</div>
 			
 		</div>
@@ -43,10 +43,10 @@
 		<div class="container">
 		
 			<div class="main-grid-item-3">
-				<h1>Elegant & Sparkle</h1>
-				<h3>Real Pearl and Crystal</h3>
+				<h1>Sleek & Simple</h1>
+				<h3>Comfortable All Day Long</h3>
 				<div class="horizontal-line-white"></div>
-				<h4><a href="#" class="text-shop">Shop Brooch</a></h4>
+				<h4><a href="#" class="text-shop">Shop Kids</a></h4>
 			</div>
 			
 			<div class="main-grid-item-4"></div>
