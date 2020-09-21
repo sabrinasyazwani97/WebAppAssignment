@@ -17,7 +17,7 @@
         <div class="container main-nav-bar-container">
             <div class="logo-container">
                 <img src="images/logo2.png" style="float:left" width="290px" height="50px"></img>
-                </span>
+        
             </div>
             <nav>
                 <ul>
