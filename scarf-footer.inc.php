@@ -5,13 +5,12 @@
             <img src="images/logo.png" alt="" style="float:left" width="380px" height="100px">
         </div>
     
-        <div class="ftr-customer">
-            <h4>Customer Care</h4>
+        <div class="ftr-questions">
+            <h4>Help & Questions</h4>
             <ul>
-                <li><a href="#">Shipping Policy</a></li>
-                <li><a href="#">Return Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><p>Monday - Friday : 9am - 5pm</p></li>
+                <li><p><a href="mailto:help@scarf4u.com">Customer Service: help@scarf4u.com</a></p></li>
+                <li><p><a href="mailto:career.scarf4u@gmail.com">HR: career.scarf4u@gmail.com</a></p></li>
             </ul>
         </div>
         
