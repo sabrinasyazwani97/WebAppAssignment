@@ -14,7 +14,7 @@
 <article class="turban">
 
   <div class="all_image">
-    <h1 id="turban-title">SARUNG COLLECTION</h1>
+    <h1 id="turban-title">TURBAN COLLECTION</h1>
     <table class="turban_table">
       <tr>
         <td><div class="one_image"><img src="images/FEMME-BABY-BLUE.jpg" title="Anisalidrus Turban - Turban Femme Baby Blue" id="img"></div></td>
