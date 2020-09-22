@@ -4,7 +4,7 @@
         <div class="container top-bar-container">
             <h5>LADIES TRENDS NO 1</h5>
             <div class="vertical-line-grey"></div>
-            <a href="register.php">Sign Up</a>
+            <a href="sign-up.php">Sign Up</a>
             <div class="vertical-line-grey"></div>
             <a href="login.php">Login</a>
             <div class="vertical-line-grey"></div>
