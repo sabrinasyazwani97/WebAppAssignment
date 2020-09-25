@@ -36,7 +36,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `image`, `price`, `category`) VALU
 (118, 'Kekaboo – Mirabelle Rossaluna', 'bawal-18', 'images/Rossaluna.jpg', 20.00, 'Bawal'),
 (119, 'Kekaboo – Mirabelle Amalea', 'bawal-19', 'images/Amalea.jpg', 20.00, 'Bawal'),
 (120, 'Kekaboo – Mirabelle Violetta', 'bawal-20', 'images/Violetta.jpg', 20.00, 'Bawal'),
-(201, 'Anisalidrus Turban - Turban Femme Baby Blue', 'turban-1', 'images/FEMME-BABY-BLUE.jpg', 75.00, 'Turban'), //turban
+(201, 'Anisalidrus Turban - Turban Femme Baby Blue', 'turban-1', 'images/FEMME-BABY-BLUE.jpg', 75.00, 'Turban'), 
 (202, 'Anisalidrus Turban - Turban Femme Pretty Pink', 'turban-2', 'images/FEMME-PRETTY-PINK.jpg', 75.00, 'Turban'),
 (203, 'Anisalidrus Turban - Turban Femme Choco Grey', 'turban-3', 'images/FEMME-CHOCO-GREY.jpg', 75.00, 'Turban'),
 (204, 'Anisalidrus Turban - Turban Femme Mint Green', 'turban-4', 'images/FEMME-MINT-GREEN.jpg', 75.00, 'Turban'),
@@ -63,7 +63,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `image`, `price`, `category`) VALU
 (314, 'Niqab Laora - Black', 'niqab-14', 'Image/Niqab/laora-black.jpg', 69.00, 'Niqab'),
 (315, 'Niqab Layla - Black', 'niqab-15', 'Image/Niqab/layla-black.jpg', 39.00, 'Niqab'),
 (316, 'Niqab Sofya - Black', 'niqab-16', 'Image/Niqab/sofya-black.jpg', 65.00, 'Niqab'),
-(401, 'Instant Shawl Eva - Candy Pink', 'shawl-1', 'Image/Shawl/naelofar_eva-candypink.jpg', 79.00, 'Shawl'), //shawl
+(401, 'Instant Shawl Eva - Candy Pink', 'shawl-1', 'Image/Shawl/naelofar_eva-candypink.jpg', 79.00, 'Shawl'), 
 (402, 'Instant Shawl Eva - Ambrosia', 'shawl-2', 'Image/Shawl/naelofar_eva-ambrosia.jpg', 79.00, 'Shawl'),
 (403, 'Semi Instant Hijab Audrey Exclusive - Plain Blue', 'shawl-3', 'Image/Shawl/lady_semi-plainblue.jpg', 129.90, 'Shawl'),
 (404, 'Semi Instant Hijab Audrey Exclusive - Plain Green', 'shawl-4', 'Image/Shawl/lady_semi-plaingreen.jpg', 129.90, 'Shawl'),
