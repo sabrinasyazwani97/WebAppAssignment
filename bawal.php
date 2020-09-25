@@ -100,7 +100,7 @@
       <tr>
         <td><div class="one_image"><img src="images/VIOLET AURORA.jpg" title="Mirabelle Violet Aurora" id="img"></br></div></br></td>
         <td><div class="one_image"><img src="images/ISOBELLE.jpg" title="Mirabelle Isobelle" id="img"></div></td>
-        <td><div class="one_image"><img src="images/Daisie.jpg" title="Kekaboo – Mirabelle Bellerose" id="img"></div></td>
+        <td><div class="one_image"><img src="images/Daisie.jpg" title="Kekaboo – Mirabelle Daisie" id="img"></div></td>
         <td><div class="one_image"><img src="images/Kadija.jpg" title="Kekaboo – Mirabelle Kadija" id="img"></div></td>
       </tr>
       <tr>
