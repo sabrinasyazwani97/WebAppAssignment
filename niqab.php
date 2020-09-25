@@ -73,7 +73,7 @@
 				<tr>
 					<td><div class="one_image"><img src="Image/Niqab/khimar-sumayyah.jpg" title="Niqab Khimar (Sumayyah) - Black" id="img"></div></td>
 					<td><div class="one_image"><img src="Image/Niqab/khimar-sara4xl.jpg" title="Niqab Khimar (Sara 4XL) - Black" id="img"></div></td>
-					<td><div class="one_image"><img src="Image/Niqab/khimar-sara4xl.jpg" title="Niqab Khimar (Sara 4XL) - Latte" id="img"></div></td>
+					<td><div class="one_image"><img src="Image/Niqab/khimar_sara4xl-latte.jpg" title="Niqab Khimar (Sara 4XL) - Latte" id="img"></div></td>
 					<td><div class="one_image"><img src="Image/Niqab/sara-black.jpg" title="Niqab Sara - Black" id="img"></div></td>
 				</tr>
 				<tr>
