@@ -47,7 +47,7 @@ INSERT INTO `products` (`id`, `name`, `code`, `image`, `price`, `category`) VALU
 (209, 'Anisalidrus Turban - Denim Pink', 'turban-9', 'Anisalidrus Turban - Denim Pink.jpg', 55.00, 'Turban'),
 (210, 'Anisalidrus Turban – Basic Blue', 'turban-10', 'images/BASIC-BLUE.jpg', 50.00, 'Turban'),
 (211, 'Anisalidrus Turban – Basic White', 'turban-11', 'images/BASIC-WHITE.jpg', 50.00, 'Turban'),
-(301, 'Niqab Belani - Black', 'niqab-1', 'Image/Niqab/belani-black.jpg', 20.00, 'Niqab'), //niqab
+(301, 'Niqab Belani - Black', 'niqab-1', 'Image/Niqab/belani-black.jpg', 20.00, 'Niqab'),
 (302, 'Niqab Belani - Brown', 'niqab-2', 'Image/Niqab/belani-brown.jpg', 20.00, 'Niqab'),
 (303, 'Niqab Belani - Emerald Green', 'niqab-3', 'Image/Niqab/belani-green.jpg', 20.00, 'Niqab'),
 (304, 'Niqab Belani - Charmine Pink', 'niqab-4', 'Image/Niqab/belani-pink.jpg', 20.00, 'Niqab'),
