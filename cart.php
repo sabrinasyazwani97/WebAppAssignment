@@ -24,12 +24,15 @@
           <th id="col-mid" width="10%">SUBTOTAL</th>
           <th id="col-mid" width="30%">UPDATE ITEM</th>
         </tr>
-        <?php include 'add-sarung-tocart.php';?>
+        <?php 
+          include 'add-bawal-tocart.php';
+          include 'add-shawl-tocart.php';
+          include 'add-turban-tocart.php';
+          include 'add-niqab-tocart.php';
+          include 'add-sarung-tocart.php';
+        ?>
         <?php
-            $query = "SELECT * FROM products WHERE category = 'Sarung' ORDER BY id ASC";
-            $result = mysqli_query($con,$query);
-
-            if(!empty($_SESSION["cart"])){
+           if(!empty($_SESSION["cart"])){
                 $subtotal = 0;
                 foreach ($_SESSION["cart"] as $key => $value) {
                     ?>
