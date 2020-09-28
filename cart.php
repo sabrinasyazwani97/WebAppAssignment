@@ -18,13 +18,13 @@
 
         <table class="container-cart">
         <tr>
-            <th id="col-mid" width="30%" colspan="2">PRODUCT</th>
-            <th id="col-mid" width="10%">QUANTITY</th>
-            <th id="col-mid" width="13%">PRICE</th>
-            <th id="col-mid" width="10%">SUBTOTAL</th>
-            <th id="col-mid" width="17%">REMOVE</th>
+          <th id="col-mid" width="40%" colspan="2">PRODUCT</th>
+          <th id="col-mid" width="10%">QUANTITY</th>
+          <th id="col-mid" width="10%">PRICE</th>
+          <th id="col-mid" width="10%">SUBTOTAL</th>
+          <th id="col-mid" width="30%">UPDATE ITEM</th>
         </tr>
-        <?php include 'add-items.php';?>
+        <?php include 'add-sarung-tocart.php';?>
         <?php
             $query = "SELECT * FROM products WHERE category = 'Sarung' ORDER BY id ASC";
             $result = mysqli_query($con,$query);
@@ -34,8 +34,8 @@
                 foreach ($_SESSION["cart"] as $key => $value) {
                     ?>
                     <tr>
-                        <td id="col-mid"><img src="<?php echo $value['item_image']; ?>" id='img'></td>
-                        <td id="col-mid"><?php echo $value["item_name"]; ?></td>
+                        <td id="col-mid"><div id="size-img"><img id="img-cart" src="<?php echo $value["item_image"]; ?>"/></div></td>
+                        <td id="col-mid" style="text-align: left; padding-left: 0.5em;"><?php echo $value["item_name"]; ?></td>
                         <td id="col-mid"><?php echo $value["item_quantity"]; ?></td>
                         <td id="col-mid">RM <?php echo $value["product_price"]; ?></td>
                         <td id="col-mid">RM <?php echo number_format($value["item_quantity"] * $value["product_price"], 2); ?></td>
@@ -56,6 +56,9 @@
         $total = 0;
 
         ?>
+
+        <h2 style="text-align: center;"><?php echo "No items added to your cart."?></h2>
+        <div style="text-align: center;"><button class="returnBtn" onclick="document.location='home.php'">RETURN TO SHOP</button></div></br></br>
 
         <table class="total-cart">
           <div>
@@ -145,4 +148,5 @@
   <?php include 'scarf-footer.inc.php';?>
 </body>
 </html>
+
 
