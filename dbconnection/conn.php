@@ -13,6 +13,7 @@
 
         mysqli_query($conn, $sql);
         die("My Address is saved successfully!");
+	echo '<script>window.location="my-account.php"</script>';
     }
     else{
         die("Error: Failed to connect to database!"); //mysqli_connect_error()
