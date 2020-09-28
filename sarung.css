@@ -1,32 +1,33 @@
 article.sarung{
- background-color: #f5cd79;
- padding-top: 75px;
- padding-bottom: 75px;
+  background-color: #f5cd79;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.all_image{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.5em;
+  justify-content: center;
+  padding: 0.5em;
 }
 
 .one_image{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-left: 0;
+}
+
+.sarung_table{
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 8em;
 }
 
 #sarung-title{
   font-size: 40px;
 	font-weight: 500;
   text-align: center;
-}
-
-.sarung_table{
-  text-align: center;
-  align-self: center;
-  table-layout: auto;
-  max-width: 1000px;
-	margin: 0 auto;
-}
-
-td, tr{
-  vertical-align: text-top;
-  width: 20em;
-
 }
 
 .addCartBtn{
@@ -48,8 +49,22 @@ td, tr{
 	color: #333;
 }
 
+#row-img{
+  height: 7em;
+}
+
+#row-name{
+  height: 4em;
+  vertical-align: text-top;
+}
+
+#row-price{
+  height: 2em;
+}
+
 #name{
   font-weight: 500;
+  overflow: hidden;
 }
 
 #promo{
@@ -61,7 +76,3 @@ td, tr{
   font-weight: bolder;
 }
 
-#oldprice{
-  text-decoration: line-through;
-  font-size: 0.8em;
-}
