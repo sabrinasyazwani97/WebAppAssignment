@@ -117,7 +117,7 @@
 			<h2>Get on the List</h2>
 			<h4>and be the first to shop new arrivals and exclusive promotions</h4>
 			
-			<form class="el-form" action="register.php">
+			<form class="el-form" action="sign-up.php">
 				<input type="email" name="email" placeholder="Email Address" required />
 				<input type="submit" value="Subscribe Now" />
 			</form>
