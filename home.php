@@ -66,7 +66,7 @@
 			
 				<a href="bawal.php" class="na-item-1">
 					<div class="na-pic">
-						<img src="images/bawal1.jpg" />
+						<img src="images/home3.jpg" />
 					</div>
 					<div class="na-text">
 						<div class="description">
@@ -79,7 +79,7 @@
 				
 				<a href="shawl.php" class="na-item-2">
 					<div class="na-pic">
-						<img src="images/shawl1.jpg" />
+						<img src="images/home4.jpg" />
 					</div>
 					<div class="na-text">
 						<div class="description">
@@ -92,7 +92,7 @@
 				
 				<a href="turban.php" class="na-item-3">
 					<div class="na-pic">
-						<img src="images/turban1.jpg" />
+						<img src="images/home5.jpg" />
 					</div>
 					<div class="na-text">
 						<div class="description">
