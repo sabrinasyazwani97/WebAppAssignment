@@ -203,7 +203,7 @@ nav li a:hover, nav li .active {
 .main-grid-item-1 {
     height: 100%;
     width: 100%;
-    background-image: url("images/image1.jpeg");
+    background-image: url("images/home1.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -228,7 +228,7 @@ nav li a:hover, nav li .active {
 .main-grid-item-4 {
     height: 100%;
     width: 100%;
-    background-image: url("images/image2.jpeg");
+    background-image: url("images/home2.jpeg");
     background-size: cover;
     background-position: center;
 }
