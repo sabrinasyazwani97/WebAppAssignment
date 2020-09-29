@@ -44,7 +44,7 @@ INSERT INTO `products` (`product_id`, `name`, `code`, `image`, `price`, `categor
 (206, 'Anisalidrus Turban – Denim Grey', 'turban-6', 'images/DENIM-GREY.jpg', 55.00, 'Turban'),
 (207, 'Anisalidrus Turban – Denim Mustard', 'turban-7', 'images/DENIM-MUSTARD.jpg', 55.00, 'Turban'),
 (208, 'Anisalidrus Turban – Denim Green', 'turban-8', 'images/DENIM-GREEN.jpg', 55.00, 'Turban'),
-(209, 'Anisalidrus Turban - Denim Pink', 'turban-9', 'Anisalidrus Turban - Denim Pink.jpg', 55.00, 'Turban'),
+(209, 'Anisalidrus Turban - Denim Pink', 'turban-9', 'images/Anisalidrus Turban - Denim Pink.jpg', 55.00, 'Turban'),
 (210, 'Anisalidrus Turban – Basic Blue', 'turban-10', 'images/BASIC-BLUE.jpg', 50.00, 'Turban'),
 (211, 'Anisalidrus Turban – Basic White', 'turban-11', 'images/BASIC-WHITE.jpg', 50.00, 'Turban'),
 (301, 'Niqab Belani - Black', 'niqab-1', 'images/Niqab/belani-black.jpg', 20.00, 'Niqab'),
