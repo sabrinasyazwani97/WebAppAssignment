@@ -3,7 +3,7 @@
 --
 
 CREATE TABLE `products` (
-  `id` int(8) NOT NULL,
+  `product_id` int(8) NOT NULL,
   `name` varchar(255) NOT NULL,
   `code` varchar(255) NOT NULL,
   `image` text NOT NULL,
