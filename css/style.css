@@ -1,0 +1,488 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: #333;
+	font-weight: 400;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/****************************************
+ 				TEXT STYLING
+ ****************************************/
+
+h1 {
+	font-size: 40px;
+	margin: 0.5em 0;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 30px;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 20px;
+	padding: 0.5em 0;
+	margin: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 18px;
+	margin: 0;
+	font-weight: 400;
+}
+
+h5 {
+	margin: 0;
+	font-weight: 400;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+}
+
+
+/****************************************
+ 				LINE STYLING
+ ****************************************/
+
+.vertical-line-grey {
+	background-color: #333;
+	height: inherit;
+	width: 1px;
+	margin: 0 0.5em;
+	opacity: 0.3;
+}
+
+.horizontal-line-black {
+	width: 80px;
+	height: 2px;
+	background-color: #333;
+	margin: 2em auto;
+}
+
+.horizontal-line-white {
+	width: 80px;
+	height: 2px;
+	background-color: white;
+
+	margin: 2em auto;
+}
+
+
+/****************************************
+ 				HEADER
+ ****************************************/
+
+header {
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+}
+
+
+/****************************************
+ 				TOP BAR
+ ****************************************/
+
+.top-bar {
+	background-color: #e2e5e9;
+	overflow: hidden;
+	height: 25px;
+	text-transform: uppercase;
+}
+
+.top-bar-container {
+	height: inherit;
+	text-align: right;
+}
+
+.top-bar-container > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/****************************************
+ 				MAIN NAV
+ ****************************************/
+
+.main-nav-bar {
+	background-color: #bb4c71;
+	opacity: .99;
+}
+
+.main-nav-bar-container {
+	overflow: auto;;
+	height: 50px;
+	width: 100%;
+}
+
+.logo-container{
+	float: left;
+	height: 100%;
+	display: table;
+}
+
+.logo-container span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+nav {
+	float: right;
+	height: 100%;
+}
+
+nav ul {
+	height: 100%;
+}
+
+nav li {
+    float: left;
+	height: 100%;
+	display: table;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+nav li a:hover, nav li .active {
+    background-color: #596275;
+}
+
+
+/****************************************
+ 				MAIN GRID
+ ****************************************/
+
+.main-grid-row-1 > div, .main-grid-row-2 > div {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.main-grid-row-1 {
+	background-color: #f7d794;
+	padding-top: 75px;
+}
+
+.main-grid-item-1 {
+    height: 100%;
+    width: 100%;
+    background-image: url("images/home1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.main-grid-item-2 {
+	padding: 5em 1em;
+	text-align: center;
+	background-color: #f5cd79;
+}
+
+.main-grid-row-2 {
+	background-color: #f3a683;
+}
+
+.main-grid-item-3 {
+	padding: 5em 1em;
+	text-align: center;
+	background-color: #f19066;
+	color: white;
+}
+
+.main-grid-item-4 {
+    height: 100%;
+    width: 100%;
+    background-image: url("images/home2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.text-shop {
+	padding: 0.5em;
+	opacity: 1;
+}
+
+.text-shop:hover {
+	opacity: 0.5;
+}
+
+
+/****************************************
+ 				NEW ARRIVALS
+ ****************************************/
+
+.new-arrivals h2 {
+	text-align: center;
+	margin: 2em 0 1em 0;
+}
+
+.new-arrivals-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	max-width: 100%;
+}
+
+.na-pic {
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+}
+
+.na-pic img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	height: inherit;
+	width: 100%;
+}
+
+.new-arrivals a {
+	text-decoration: none;
+}
+
+.na-text {
+	background-color: #d3d9de;
+	text-align: center;
+	height: 70px;
+	width: 100%;
+	position: relative;
+}
+
+.na-text p {
+	padding-bottom: 0.5em;
+}
+
+.na-text .view-details, .na-text .description {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.na-text .view-details {
+	opacity: 0;
+}
+
+.na-text .description {
+	opacity: 1;
+	width: 100%;
+}
+
+/* hover */
+
+.new-arrivals a:hover .na-text{
+	background-color: #ffdcba;
+}
+
+.new-arrivals a:hover .na-text .description {
+	opacity: 0;
+}
+
+.new-arrivals a:hover .na-text .view-details {
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+
+.new-arrivals a:not(:hover) .na-text .description {
+	transition-delay: 0.1s;
+}
+
+.new-arrivals a:hover .na-pic img {
+	width: 120%;
+	transition-duration: 0.6s;
+}
+
+.new-arrivals a:not(:hover) .na-pic img {
+	transition-duration: 0.6s;
+}
+
+
+/****************************************
+ 				EMAIL LIST //#f5bfbd
+ ****************************************/
+
+.email-list {
+	text-align: center;
+}
+
+.email-list h2 {
+	margin: 2.5em 0 0.3em 0;
+}
+
+.el-form {
+	margin: 2em 0 5em;
+}
+
+.el-form input {
+	width: 250px;
+	display: block;
+	padding: 0.7em 0.5em;
+	margin: 0.5em auto;
+	font-size: 1em;
+}
+
+input[type="email"] {
+	background-color: #d3d9de;
+
+	border-style: none;
+	border: 1px solid #c5cdd3;
+	border-width: 1px;
+
+}
+
+input[type="submit"] {
+	 background: none;
+	 border: none;
+	 color: white;
+	 background-color: #bb4c71;
+	 border: 1px solid #bb4c71;
+	 font-weight: bold;
+	 letter-spacing: 0.05em;
+	 box-sizing: content-box;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #ffdcba;
+	border: 1px solid #ffdcba;
+	color: #333;
+}
+
+/****************************************
+ 				PROMOTIONS
+ ****************************************/
+
+.promotions {
+	background-color: #333;
+	color: white;
+}
+
+.promotions h1, .promotions h3 {
+	font-weight: 700;
+}
+
+.promotions h1 {
+	margin-top: 0.1em;
+}
+
+.promotions .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 3em;
+	padding: 4em 0;
+}
+
+.promotions .container > div > a {
+	display: block;
+	padding: 8em 0;
+	text-align: center;
+	background-color: rgba(51, 51, 51, 0.3);
+}
+
+.promo-item-1 {
+    background-image: url("images/pins.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.promo-item-2 {
+    background-image: url("images/merdeka-sale.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/****************************************
+ 				FOOTER
+ ****************************************/
+
+footer {
+	background-color: #e2e5e9;
+	padding: 2em 0;
+}
+
+footer .container {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr 1fr 1fr;
+}
+
+footer h4 {
+	margin-bottom: 0.6em;
+	text-transform: uppercase;
+}
+
+footer p, footer li{
+	margin-bottom: 0.4em;
+}
+
+footer .social {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	font-size: 30px;
+	margin-left: -0.4em;
+}
+
+footer .social i {
+	padding: 0.2em 0.4em;
+}
+
+footer .social div:nth-child(2) {
+	margin-left: 0.1em;
+}
+
+footer a:hover {
+	opacity: 0.5;
+}
+
+
+
+/****************************************
+ 				ANIMATIONS
+ ****************************************/
+
+:hover, :not( :hover ) {
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}

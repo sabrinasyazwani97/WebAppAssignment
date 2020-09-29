@@ -1,0 +1,87 @@
+article.checkout{
+  background-color: #f5cd79;
+  padding-top: 100px;
+  padding-bottom: 75px;
+}
+
+#billing-form{
+  text-align: left;
+  margin: 0;
+  padding: 0.5em 0 0.5em 0.5em;
+}
+
+#confirm-order{
+  text-align: right;
+  margin: 0 0.5em;
+  padding: 0.5em 0 0.5em 0.5em;
+}
+
+#online-bank{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+}
+
+.place-orderBtn{
+  margin-top: 1em;
+  background-color: #bb4c71;
+	opacity: .99;
+  color: white;
+  border: 1px solid #D6DBDF;
+  height: 3em;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  float: right;
+}
+
+.place-orderBtn:hover{
+  cursor: pointer;
+  background-color: #ffdcba;
+  border: 1px solid #ffdcba;
+  color: #333;
+}
+
+.bank{
+  padding: 0.2em;
+}
+
+.add-line1, .add-line2, .tel-no, .email-add, .remarks{
+  background-color: #d3d9de;
+	opacity: .80;
+  border: hidden;
+  height: 3em;
+  padding: 0.5em;
+  font-size: 1em;
+  color: black;
+  margin: 0.5em;
+  width: 31.5em;
+}
+
+.fname, .lname, .add-country, .state, .add-city, .postcode{
+  background-color: #d3d9de;
+	opacity: .80;
+  border: hidden;
+  height: 3em;
+  padding: 0.5em;
+  font-size: 1em;
+  color: black;
+  margin: 0.5em;
+  width: 15em;
+}
+
+.all-container{
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#title-bill{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+placeholder{
+  font-size: 10px;
+	font-weight: 300;
+  color: gray;
+}
