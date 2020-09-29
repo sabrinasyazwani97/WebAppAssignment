@@ -20,7 +20,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="style-account.css">
+  <link rel="stylesheet" type="text/css" href="css/style-account.css">
 	<script src="script.js"></script>
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
