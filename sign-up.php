@@ -59,12 +59,32 @@
   	</div>
 	<div class="input-group">
   	  <label>State</label>
-  	  <input type="state" name="state">
+		<select name="state">
+			<option selected="" value="Default">Select a state</option>
+			<option value="Johor">Johor</option>
+			<option value="Kedah">Kedah</option>
+			<option value="Kelantan">Kelantan</option>
+			<option value="Malacca">Malacca</option>
+			<option value="Negeri Sembilan">Negeri Sembilan</option>
+			<option value="Pahang">Pahang</option>
+			<option value="Perak">Perak</option>
+			<option value="Perlis">Perlis</option>
+			<option value="Penang">Penang</option>
+			<option value="Sabah">Sabah</option>
+			<option value="Sarawak">Sarawak</option>
+			<option value="Selangor">Selangor</option>
+			<option value="Terengganu">Terengganu</option>
+			<option value="WP KL">W. P. Kuala Lumpur</option>
+			<option value="WP Labuan">W. P. Labuan</option>
+			<option value="WP Putrajaya">W. P. Putrajaya</option>
+		</select>
   	</div>
 	<div class="input-group">
-  	  <label>Country</label>
-  	  <input type="country" name="country">
-  	</div>
+		<label>Country</label>
+		<select name="country">
+			<option value="Malaysia">Malaysia</option>
+		</select>
+  	</div><br/>
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">Register</button>
   	</div>
