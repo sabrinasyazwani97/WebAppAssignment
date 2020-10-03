@@ -1,4 +1,4 @@
-<?php include 'add-bawal-tocart.php';?>
+<?php include 'addtocart-action.php';?>
 
 <html lang="en">
 <head>
@@ -19,14 +19,14 @@
     <div class="all_image">
 
       <?php
-          $query = "SELECT * FROM products WHERE category = 'Bawal' ORDER BY id ASC";
+          $query = "SELECT * FROM products WHERE category = 'Bawal' ORDER BY product_id ASC";
           $result = mysqli_query($con,$query);
           if(mysqli_num_rows($result) > 0) {
 
               while ($row = mysqli_fetch_array($result)) {
 
                   ?>
-                  <form method="post" action="bawal.php?action=add&id=<?php echo $row["id"]; ?>">
+                  <form method="post" action="bawal.php?action=add&id=<?php echo $row["product_id"]; ?>">
                     <div>
                     <table class="bawal_table">
                         <tr>
@@ -59,3 +59,4 @@
   <?php include 'scarf-footer.inc.php';?>
 </body>
 </html>
+
