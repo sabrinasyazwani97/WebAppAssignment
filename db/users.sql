@@ -34,10 +34,10 @@ CREATE TABLE `users` (
   `password` varchar(100) NOT NULL,
   `fname` varchar(100) NOT NULL,
   `lname` varchar(100) NOT NULL,
-  `contact_num` int(50) NOT NULL,
+  `contact_num` varchar(11) NOT NULL,
   `street_1` varchar(100) NOT NULL,
   `street_2` varchar(100) NOT NULL,
-  `zipcode` int(50) NOT NULL,
+  `zipcode` varchar(5) NOT NULL,
   `city` varchar(50) NOT NULL,
   `state` varchar(50) NOT NULL,
   `country` varchar(50) NOT NULL
@@ -48,7 +48,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `fname`, `lname`, `contact_num`, `street_1`, `street_2`, `zipcode`, `city`, `state`, `country`) VALUES
-(2, 'sshakina', 'ohhshakina@yahoo.com', '202cb962ac59075b964b07152d234b70', 'Shakina', 'Mohd', 175202199, 'Persiaran Newron', 'Multimedia University', 63000, 'Cyberjaya', 'Selangor', 'Malaysia');
+(2, 'sshakina', 'ohhshakina@yahoo.com', '202cb962ac59075b964b07152d234b70', 'Shakina', 'Mohd', '0175202199', 'Persiaran Newron', 'Multimedia University', '63000', 'Cyberjaya', 'Selangor', 'Malaysia');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `fname`, `lname`, `contact_num`, `street_1`, `street_2`, `zipcode`, `city`, `state`, `country`) VALUES
+(3, 'admin', 'admin@gmail.com', 'admin123', 'Admin', 'Besar', '0123456789', 'No 80, Lorong Burhanuddin Helmi 3', 'Taman Tun Dr Ismail', '60000', 'Kuala Lumpur', 'W. P. Kuala Lumpur', 'Malaysia');
 
 --
 -- Indexes for dumped tables
