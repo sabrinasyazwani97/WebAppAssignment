@@ -2,7 +2,7 @@
 -- Table structure for table `orders`
 --
 CREATE TABLE `orders` (
-	`order_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	`order_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	`order_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`user_id` int(11) NOT NULL,
 	`quantity_product` int(11) NOT NULL,
