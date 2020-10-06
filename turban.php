@@ -1,4 +1,4 @@
-<?php include 'addtocart-action.php';?>
+<?php include 'action.php';?>
 
 <html lang="en">
 <head>
@@ -38,7 +38,8 @@
                         <tr>
                           <td id="row-price"><text id="price"><?php echo 'RM'.$row["price"]; ?></text></td>
                         </tr>
-                        <input type="hidden" name="quantity" value="1";>
+                        <!--input type="hidden" name="quantity" value="1";-->
+                        <input type="hidden" name="product_id" value="<?php echo $row["product_id"]; ?>">
                         <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>">
                         <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                         <input type="hidden" name="hidden_img" value="<?php echo $row["image"]; ?>">
