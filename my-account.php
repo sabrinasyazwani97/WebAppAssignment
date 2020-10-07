@@ -18,7 +18,7 @@
 <body>
 
 	<!-- HEADER -->
-    <?php include 'login-header.inc.php'; 
+    <?php include 'scarf-header.inc.php'; 
     
         // start session
         session_start();
