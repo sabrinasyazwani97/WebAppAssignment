@@ -42,7 +42,7 @@
             <h2>Update My Address</h2>
             <div style="border-top: 1px dotted #ffdcba;"></div><br/>
         
-            <form method='post' action=update-address.php>
+            <form method='post' action=conn/update-address.php>
                 <input class='input' type='hidden' name='did'/>
                 <br/>
                 <label>Street 1:  </label>
