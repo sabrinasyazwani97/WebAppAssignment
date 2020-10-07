@@ -1,9 +1,10 @@
 <?php
 session_start();
-
 $username = "";
 $email    = "";
-$errors = array(); 
+$errors = array();
+
+include'conn.php';
 
 // connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'scarf4u');
@@ -11,7 +12,8 @@ $db = mysqli_connect('localhost', 'root', '', 'scarf4u');
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
-  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $fname = mysqli_real_escape_string($db, $_POST['fname']);
+  $lname = mysqli_real_escape_string($db, $_POST['lname']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
@@ -25,7 +27,6 @@ if (isset($_POST['reg_user'])) {
   $state = mysqli_real_escape_string($db, $_POST['state']);
   $country = mysqli_real_escape_string($db, $_POST['country']);
 
-  if (empty($username)) { array_push($errors, "Username is required"); }
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
@@ -42,15 +43,12 @@ if (isset($_POST['reg_user'])) {
   if (empty($country)) { array_push($errors, "Country is required"); }
 
   // first check the database to make sure 
-  // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+  // a user does not already exist with the same email
+  $user_check_query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
   if ($user) { // if user exists
-    if ($user['username'] === $username) {
-      array_push($errors, "Username already exists");
-    }
 
     if ($user['email'] === $email) {
       array_push($errors, "email already exists");
@@ -61,16 +59,15 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);
 
-  	$query = "INSERT INTO users (username, email, password, fname, lname, contact_num, street_1, street_2, zipcode, city, state, country) 
-  			  VALUES('$username', '$email', '$password', '$fname', '$lname', '$contact_num', '$street_1', '$street_2',
+  	$query = "INSERT INTO users (fname, lname,  email, password,  contact_num, street_1, street_2, zipcode, city, state, country) 
+  			  VALUES('$fname', '$lname', '$email', '$password', '$contact_num', '$street_1', '$street_2',
 			  '$zipcode', '$city', '$state', '$country' )";
   	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
+  	$_SESSION['fname'] = $fname;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: home.php');
   }
 }
-
 // LOGIN USER
 if (isset($_POST['login_user'])) {
 	$username = mysqli_real_escape_string($db, $_POST['username']);
