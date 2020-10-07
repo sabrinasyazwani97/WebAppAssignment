@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<?php include 'action.php'; ?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -18,9 +20,7 @@
 <body>
 
 	<!-- HEADER -->
-    <?php include 'scarf-header.inc.php'; 
-    
-    ?>
+    <?php include 'scarf-header.inc.php'; ?>
 
 	
 	<!-- MAIN GRID -->
@@ -42,7 +42,7 @@
             <h2>Update My Address</h2>
             <div style="border-top: 1px dotted #ffdcba;"></div><br/>
         
-            <form method='post' action=update-address.php>
+            <form method='post' action=update-my-address.php>
                 <input class='input' type='hidden' name='did'/>
                 <br/>
                 <label>Street 1:  </label>
@@ -62,7 +62,7 @@
                 <input class='input' type='text' name='dcountry' value='Malaysia'/>
                 <br/>
 
-                <input class='submit' type='submit' name='submit' value='Update'/>
+                <input class='submit' type='submit' name='update_address' value='Update'/>
             </form><br/><br/>
         </div>
     </div>
