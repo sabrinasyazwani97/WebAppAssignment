@@ -18,14 +18,7 @@
 <body>
 
 	<!-- HEADER -->
-    <?php include 'scarf-header.inc.php'; 
-    
-        // start session
-        session_start();
-
-        $id = $_SESSION['user_id'];
-    ?>
-
+    <?php include 'scarf-header.inc.php'; ?>
 	
 	<!-- MAIN GRID -->
     <br/><br/><br/><br/><br/><br/>
@@ -46,36 +39,11 @@
             <h2>My Recent Orders</h2>
             <div style="border-top: 1px dotted #ffdcba;"></div>
         
-            <?php
-                $conn = mysqli_connect("localhost", "root", "", "scarf4u");
-                $query = "SELECT * FROM orders WHERE user_id = '$id'";
-
-
-                echo '<table margin-left="15%" border="0" cellspacing="5" cellpadding="5" text-align="center"> 
-                    <tr> 
-                        <td>Order Created  </td> 
-                        <td>Order ID  </td> 
-                        <td>Quantity  </td> 
-                        <td>Total (RM)</td> 
-                    </tr></table>';
-
-                if ($result = $conn->query($query)) {
-                    while ($row = $result->fetch_assoc()) {
-                        $field1name = $row["order_created"];
-                        $field2name = $row["order_id"];
-                        $field3name = $row["quantity_order"];
-                        $field4name = $row["total"];
-
-                        echo '<tr> 
-                                <td>'.$field1name.'</td> 
-                                <td>'.$field2name.'</td> 
-                                <td>'.$field3name.'</td> 
-                                <td>'.$field4name.'</td> 
-                            </tr>';
-                    }
-                    $result->free();
-                } 
+            <?php 
+                include 'action.php';
+                recentOrder();
             ?>
+
         </div>
     </div>
     <br/><br/>
