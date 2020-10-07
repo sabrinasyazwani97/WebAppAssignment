@@ -12,7 +12,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 
-	<title>Scarf4u | My Recent Orders</title>
+	<title>Scarf4u | Update My Address</title>
 </head>
 
 <body>
