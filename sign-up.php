@@ -13,9 +13,13 @@
 	
   <form method="post" action="sign-up.php">
   	<?php include('error.php'); ?>
-  	<div class="input-group">
-  	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+	<div class="input-group">
+  	  <label>First Name</label>
+  	  <input type="fname" name="fname">
+  	</div>
+	<div class="input-group">
+  	  <label>Last Name</label>
+  	  <input type="lname" name="lname">
   	</div>
   	<div class="input-group">
   	  <label>Email</label>
@@ -28,14 +32,6 @@
 	<div class="input-group">
   	  <label>Confirm password</label>
   	  <input type="password" name="password_2">
-  	</div>
-  	<div class="input-group">
-  	  <label>First Name</label>
-  	  <input type="fname" name="fname">
-  	</div>
-	<div class="input-group">
-  	  <label>Last Name</label>
-  	  <input type="lname" name="lname">
   	</div>
 	<div class="input-group">
   	  <label>Contact Number</label>
