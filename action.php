@@ -5,7 +5,8 @@ if(!isset($_SESSION))
 }
 include "conn.php";
 
-//Register - (insert into user table) *shakina
+//*********** Shakina ********************************
+//Register - (insert into user table)
 
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
@@ -68,32 +69,132 @@ if (isset($_POST['reg_user'])) {
 
 
 
+//*********** Alyaa **********************************
+//Login - START session uid (select from user table)
 
-//Login - START session uid (select from user table) *alyaa
 
-
-
+//*********** Shakina ********************************
 //Header - *edit header.php *shakina
 
 
+//********** Nadiah **********************************
+//My account  
+//Details (select from user table)
+function myAccount(){
+    if (isset($_SESSION['fname'])) 
+    {
+        $db_select = mysqli_select_db($conn, "users");
+        if(!$db_select){
+            die("Database selection failed ".mysqli_error($conn));
+    
+        }
+        else{
+            $query = "SELECT * FROM users WHERE user_id = '$id'";
+    
+            if ($result = $conn->query($query)) {
+                while ($row = $result->fetch_assoc()) {
+                    $field1name = $row["email"];
+                    $field2name = $row["fname"];
+                    $field3name = $row["lname"];
+                    $field4name = $row["contact_num"];
+                    $field5name = $row["street_1"];
+                    $field6name = $row["street_2"];
+                    $field7name = $row["zipcode"];
+                    $field8name = $row["city"];
+                    $field9name = $row["states"];
+                    $field10name = $row["country"];
+    
+                    echo "Email: <b>" .$field1name."</b><br/><br/>";
+                    echo "Full name: <b>" .$field2name." ".$field3name."</b><br/><br/>";
+                    echo "Contact number: <b>" .$field4name."</b><br/><br/><br/>";
+                    echo "<div style='border-top: 2px dashed #bb4c71;'></div>";
+                    echo "<h2>My Address</h2>";
+                    echo "<div style='border-top: 1px dotted #ffdcba;'></div><br/>";
+                    echo "Street 1: <b>" .$field5name. "</b><br/><br/>";
+                    echo "Street 2: <b>" .$field6name. "</b><br/><br/>";
+                    echo "Zipcode: <b>" .$field7name. "</b><br/><br/>";
+                    echo "City: <b>" .$field8name. "</b><br/><br/>";
+                    echo "State: <b>" .$field9name. "</b><br/><br/>";
+                    echo "Country: <b>" .$field10name. "</b><br/><br/>";
+                }
+            }
+        }
+    
+    }
+}
 
-//My account  *nad
+
+//My recent order (select from order table) *nad
+function recentOrder(){
+    if (isset($_SESSION['fname'])) 
+    {
+        $db_select = mysqli_select_db($conn, "orders");
+        if(!$db_select){
+            die("Database selection failed ".mysqli_error($conn));
+
+        }
+        else{
+            $query = "SELECT * FROM orders WHERE user_id = '$id'";
+            if (mysqli_num_rows($query)>0) {
+
+                echo '<table margin-left="15%" border="0" cellspacing="5" cellpadding="5" text-align="center"> 
+                        <tr> 
+                            <td>Order Created  </td> 
+                            <td>Order ID  </td> 
+                            <td>Quantity  </td> 
+                            <td>Total (RM)</td> 
+                        </tr></table>';
+
+                if ($result = $conn->query($query)) {
+                    while ($row = $result->fetch_assoc()) {
+                        $field1name = $row["order_time"];
+                        $field2name = $row["order_id"];
+                        $field3name = $row["quantity_order"];
+                        $field4name = $row["total"];
+
+                        echo '<tr> 
+                                <td>'.$field1name.'</td> 
+                                <td>'.$field2name.'</td> 
+                                <td>'.$field3name.'</td> 
+                                <td>'.$field4name.'</td> 
+                            </tr>';
+                    }
+                    $result->free();
+                }
+            } 
+            else{
+                echo "Your order is empty.";
+            }
+        }
+
+    }
+}
 
 
+//Update my address (update user table) *nad
+if (isset($_POST['update_address'])) {
+    $db_select = mysqli_select_db($conn, "users");
+    if(!$db_select){
+        die("Database selection failed ".mysqli_error($conn));
 
-//details (select from user table)
+    }
+    else{
+        $sql = "UPDATE users SET street_1='$street1', street_2='$street2', zipcode='$zipcode', city='$city', 
+                states='$state', country='$country' where user_id = '$id'";
+        if(!mysqli_query($conn, $sql)){
+            die("Error update my address! ".mysqli_error($conn));
 
+        }else{
+            echo "<script>alert('Succesfully update my address!')</script>";
+            header('location: my-account.php');
+        }
 
+    }
 
-//Recent order (select from order table)
+}
 
-
-
-//Update address (update user table)
-
-
-
-//Add to cart - (insert into cart) *sab
+//*********** Sabrina ********************************
+//Add to cart - (insert into cart)
 if(isset($_POST["add"])){
 		$prod_id = $_POST["product_id"];
 
@@ -132,13 +233,12 @@ if(isset($_POST["add"])){
 //Checkout - (select from user : details) *sab
 
 
+//*************** Shakina **********************************
+//Before place order - (insert into orders, product_order)
 
-//Before place order - (insert into orders, product_order) *shakina
 
-
-
-//After place order - (delete uid from cart) *alyaa
-
+//*************** Alyaa ************************************
+//After place order - (delete uid from cart)
 
 
 //Logout - Destroy session uid *alyaa
