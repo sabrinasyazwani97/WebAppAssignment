@@ -1,0 +1,117 @@
+div#page {
+border:0px solid black;
+width:90%;
+margin:0 auto;
+padding:5px;
+text-align:left;
+}
+
+div#details { 
+    text-align: 100px left;
+}
+
+div { text-align:center;}
+
+div#menu {
+color:white;
+border: 5px solid #b8315e;
+background-color: #bb4c71;
+width:450px;
+float:left;
+margin:10px 0 10px 5px;
+height:350px;
+}
+
+/* Style the buttons that are used to open the tab content */
+div#tab li {
+display: block;
+background-color: inherit;
+color: black;
+padding: 22px 16px;
+width: 93%;
+border: none;
+outline: none;
+text-align: left;
+cursor: pointer;
+transition: 0.3s;
+}
+  
+/* Change background color of buttons on hover */
+div#tab li:hover {
+background-color: #ffdcba;
+}
+
+/* Create an active/current "tab button" class */
+div#tab li:active {
+background-color: #ffdcba;
+}
+
+
+div#content {
+border:2px solid #bb4c71;
+width:800px;
+margin:10px 0 10px 485px;
+min-height:500px;
+_height:500px
+}
+
+.form{
+width:400px;
+float:left;
+background-color:#f0f8ff;
+font-family:'Droid Serif',serif;
+padding-left:30px
+}
+
+#form3{
+color:#bb4c71;
+font-weight:700
+}
+
+
+form h2{
+text-align:center;
+text-shadow:2px 2px 2px #cfcfcf
+}
+
+textarea{
+width:250px;
+height:60px;
+border-radius:1px;
+box-shadow:0 0 1px 2px #123456;
+margin-top:10px;
+padding:5px 0;
+border:none
+}
+.input{
+width:250px;
+height:15px;
+border-radius:1px;
+box-shadow:0 0 1px 2px #123456;
+margin-top:10px;
+padding:5px 0;
+border:none;
+margin-bottom:20px
+}
+.submit{
+color:#fff;
+border-radius:3px;
+background:#1F8DD6;
+padding:5px;
+margin-top:40px;
+border:none;
+width:100px;
+height:30px;
+box-shadow:0 0 1px 2px #123456;
+font-size:16px
+}
+
+.clear{
+clear:both
+}
+
+div#content table{
+    border:1px;
+    border-spacing:4px;
+    text-align:left;
+}
