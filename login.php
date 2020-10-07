@@ -4,8 +4,8 @@
 <html>
 	<head>
 		<title>Login | Scarf4u</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="login.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="css/login.css" rel="stylesheet"/>
 		<script src="script.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
