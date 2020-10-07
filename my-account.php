@@ -37,7 +37,7 @@
             <div id="tab">
                 <ul>
                     <li><a href="#">My Account Details</a></li><br/>
-                    <li><a href="update-address.php">Update My Address</a></li><br/>
+                    <li><a href="update-my-address.php">Update My Address</a></li><br/>
                     <li><a href="my-recent-order.php" class="active">My Orders</a></li><br/>
                 </ul>
             </div>
