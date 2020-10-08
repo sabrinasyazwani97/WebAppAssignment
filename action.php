@@ -168,6 +168,33 @@ if(isset($_POST["checkout"])){
 
 //Before place order - (insert into orders, product_order) *shakina
 
+
+if(isset($_POST["addToOrder"])){
+		$order_id = $_POST["order_id"];
+
+		if(isset($_SESSION["uid"])){
+  		$user_id = $_SESSION["uid"];
+  		$sql = "SELECT * FROM orders WHERE order_id = '$order_id' AND user_id = '$user_id'";
+  		$run_query = mysqli_query($con,$sql); 
+  		$count = mysqli_num_rows($run_query); 
+
+  		if($count > 0){
+        echo '<script>alert("Product is already in Order Details")</script>';
+        echo '<script>window.location="#"</script>';
+		  }
+
+      else{
+  			$sql = "INSERT INTO `orders`(`order_id`, `user_id`, `quantity_product`)
+  			             VALUES ('$order_id','$user_id','1')";
+
+  			if(mysqli_query($con,$sql)){
+          echo '<script>alert("Added to Order Details")</script>';
+          echo '<script>window.location="#"</script>';
+  			}
+		  }
+		}
+}
+
 //After place order - (delete uid from cart) *alyaa
 
 //Logout - Destroy session uid *alyaa
