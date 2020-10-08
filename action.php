@@ -50,57 +50,75 @@ function myAccount(){
 }
 
 
-//My recent order (select from order table) *nad
+//My recent order (select from order table) *nad DONEE!
 function recentOrder(){
     include "conn.php";
           $user_id = $_SESSION["uid"];
           $query = "SELECT * FROM orders WHERE user_id = '$user_id'";
           $results = mysqli_query($con, $query);
-            if (mysqli_num_rows($results)>0) {
+          if (mysqli_num_rows($results)>0) {
 
-                echo '<table margin-left="15%" border="0" cellspacing="5" cellpadding="5" text-align="center">
-                        <tr>
-                            <td>Order Created  </td>
-                            <td>Order ID  </td>
-                            <td>Quantity  </td>
-                            <td>Total (RM)</td>
-                        </tr></table>';
+            echo '<table id="table-style">
+                  <thead>
+                  <tr>
+                      <th>No  </th>
+                      <th>Order Created  </th>
+                      <th>Order ID  </th>
+                      <th>Quantity  </th>
+                      <th>Total (RM)</th>
+                  </tr></thead>';
 
-                if ($result = $con->query($query)) {
-                    while ($row = $result->fetch_assoc()) {
-                        $field1name = $row["order_time"];
-                        $field2name = $row["order_id"];
-                        $field3name = $row["quantity_order"];
-                        $field4name = $row["total"];
+            if ($result = $con->query($query)) {
+                $x = 1;
+                while ($row = $result->fetch_array()) {
+                    $field1name = $row["order_created"];
+                    $field2name = $row["order_id"];
+                    $field3name = $row["quantity_product"];
+                    $field4name = $row["total"];
 
-                        echo '<tr>
-                                <td>'.$field1name.'</td>
-                                <td>'.$field2name.'</td>
-                                <td>'.$field3name.'</td>
-                                <td>'.$field4name.'</td>
-                            </tr>';
-                    }
-                    $result->free();
+                    echo '<tr>
+                            <td>'.$x.'</td>
+                            <td>'.$field1name.'</td>
+                            <td>'.$field2name.'</td>
+                            <td>'.$field3name.'</td>
+                            <td>'.$field4name.'</td>
+                        </tr>';
+                    $x++;
                 }
+                $result->free();
+                echo '</table>';
             }
-            else{
-                echo "Your order is empty.";
-            }
+        }
+        else{
+            echo "Your order is empty.";
+        }
 }
 
 
-//Update my address (update user table) *nad
+//Update my address (update user table) *nad DONEE!
 if (isset($_POST['update_address'])) {
+  if (isset($_SESSION['uid'])){
+    $user_id = $_SESSION["uid"];
 
-        $sql = "UPDATE users SET street_1='$street1', street_2='$street2', zipcode='$zipcode', city='$city',
-                state='$state', country='$country' where user_id = '$user_id'";
-        if(!mysqli_query($con, $sql)){
-            die("Error update my address! ".mysqli_error($con));
+    $street1 = $_POST['dstreet_1'];
+    $street2 = $_POST['dstreet_2'];
+    $zipcode = $_POST['dzipcode'];
+    $city = $_POST['dcity'];
+    $state = $_POST['dstate'];
+    $country = $_POST['dcountry'];
 
-        }else{
-            echo "<script>alert('Succesfully update my address!')</script>";
-            header('location: my-account.php');
-        }
+    $sql = "UPDATE users SET street_1='$street1', street_2='$street2', zipcode='$zipcode', city='$city',
+            state='$state', country='$country' where user_id = '$user_id'";
+    if(!mysqli_query($con, $sql)){
+        die("Error update my address! ".mysqli_error($con));
+        echo "<script>window.alert('Error update my address!')</script>";
+        header('location: update-my-address.php');
+    }
+    else{
+        echo "<script>window.alert('Succesfully update my address!')</script>";
+        header('location: my-account.php');
+    }
+  }
 
 }
 
@@ -147,11 +165,9 @@ if (isset($_POST["updateCartItem"])){
   }
 }
 
-//Delete product - (delete from cart) *sab DONEE!
+//Delete product - (delete item from cart) *sab DONEE!
 if (isset($_POST["delete"])){
 	$remove_id = $_POST["remove_id"];
-  echo "delete";
-  echo "$remove_id";
 	if (isset($_SESSION["uid"])){
 		$sql = "DELETE FROM cart WHERE product_id = '$remove_id' AND user_id = '$_SESSION[uid]'";
 	}
@@ -161,44 +177,36 @@ if (isset($_POST["delete"])){
 	}
 }
 
-//Checkout - (select from user : details) *sab
-if(isset($_POST["checkout"])){
-		$prod_id = $_POST["product_id"];
+
+//Before place order - (insert into orders, product_order) *sab DONEE!
+if (isset($_POST["confirmOrder"])){
+  if (isset($_SESSION["uid"])) {
+    $qty = $_POST["all-qty"];
+    $total = $_POST["total"];
+    $user_id = $_SESSION["uid"];
+    $sql = "INSERT INTO orders (user_id, quantity_product, total)
+  			  VALUES('$user_id', '$qty', '$total')";
+    mysqli_query($con,$sql);
+
+    }
 }
 
-//Before place order - (insert into orders, product_order) *shakina
 
+//After place order - (delete uid from cart) *sab
+if (isset($_POST["deleteCart"])){
+  if(isset($_SESSION["uid"])){
+    $user_id = $_SESSION["uid"];
+    $sql = "DELETE FROM cart WHERE user_id = '$user_id'";
+  }
 
-if(isset($_POST["addToOrder"])){
-		$order_id = $_POST["order_id"];
-
-		if(isset($_SESSION["uid"])){
-  		$user_id = $_SESSION["uid"];
-  		$sql = "SELECT * FROM orders WHERE order_id = '$order_id' AND user_id = '$user_id'";
-  		$run_query = mysqli_query($con,$sql); 
-  		$count = mysqli_num_rows($run_query); 
-
-  		if($count > 0){
-        echo '<script>alert("Product is already in Order Details")</script>';
-        echo '<script>window.location="#"</script>';
-		  }
-
-      else{
-  			$sql = "INSERT INTO `orders`(`order_id`, `user_id`, `quantity_product`)
-  			             VALUES ('$order_id','$user_id','1')";
-
-  			if(mysqli_query($con,$sql)){
-          echo '<script>alert("Added to Order Details")</script>';
-          echo '<script>window.location="#"</script>';
-  			}
-		  }
-		}
+    if(mysqli_query($con,$sql)){
+      header('location: my-recent-order.php');
+  	}
 }
-
-//After place order - (delete uid from cart) *alyaa
 
 //Logout - Destroy session uid *alyaa
 
 
 ?>
+
 
