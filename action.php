@@ -1,98 +1,27 @@
 <?php
-if(!isset($_SESSION))
-{
-    session_start();
-}
+session_start();
 include "conn.php";
 
-//*********** Shakina ********************************
-//Register - (insert into user table)
-
-if (isset($_POST['reg_user'])) {
-  // receive all input values from the form
-  $fname = mysqli_real_escape_string($db, $_POST['fname']);
-  $lname = mysqli_real_escape_string($db, $_POST['lname']);
-  $email = mysqli_real_escape_string($db, $_POST['email']);
-  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
-  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-  $fname = mysqli_real_escape_string($db, $_POST['fname']);
-  $lname = mysqli_real_escape_string($db, $_POST['lname']);
-  $contact_num = mysqli_real_escape_string($db, $_POST['contact_num']);
-  $street_1= mysqli_real_escape_string($db, $_POST['street_1']);
-  $street_2 = mysqli_real_escape_string($db, $_POST['street_2']);
-  $zipcode = mysqli_real_escape_string($db, $_POST['zipcode']);
-  $city = mysqli_real_escape_string($db, $_POST['city']);
-  $state = mysqli_real_escape_string($db, $_POST['state']);
-  $country = mysqli_real_escape_string($db, $_POST['country']);
-
-  if (empty($email)) { array_push($errors, "Email is required"); }
-  if (empty($password_1)) { array_push($errors, "Password is required"); }
-  if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
-  }
-  if (empty($fname)) { array_push($errors, "First Name is required"); }
-  if (empty($lname)) { array_push($errors, "last Name is required"); }
-  if (empty($contact_num)) { array_push($errors, "Contact Number is required"); }
-  if (empty($street_1)) { array_push($errors, "Street_1 is required"); }
-  if (empty($street_2)) { array_push($errors, "Street_2 is required"); }
-  if (empty($zipcode)) { array_push($errors, "Zipcode is required"); }
-  if (empty($city)) { array_push($errors, "City is required"); }
-  if (empty($state)) { array_push($errors, "State is required"); }
-  if (empty($country)) { array_push($errors, "Country is required"); }
-
-  // first check the database to make sure 
-  // a user does not already exist with the same email
-  $user_check_query = "SELECT * FROM users WHERE email='$email' LIMIT 1";
-  $result = mysqli_query($db, $user_check_query);
-  $user = mysqli_fetch_assoc($result);
-  
-  if ($user) { // if user exists
-
-    if ($user['email'] === $email) {
-      array_push($errors, "email already exists");
-    }
-  }
-
-  
-  if (count($errors) == 0) {
-  	$password = md5($password_1);
-
-  	$query = "INSERT INTO users (fname, lname,  email, password,  contact_num, street_1, street_2, zipcode, city, state, country) 
-  			  VALUES('$fname', '$lname', '$email', '$password', '$contact_num', '$street_1', '$street_2',
-			  '$zipcode', '$city', '$state', '$country' )";
-  	mysqli_query($db, $query);
-  	$_SESSION['fname'] = $fname;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
-  }
-}
-
-
-
-//*********** Alyaa **********************************
-//Login - START session uid (select from user table)
-
-
-//*********** Shakina ********************************
-//Header - *edit header.php *shakina
-
-
 //********** Nadiah **********************************
-//My account  
-//Details (select from user table)
+//My account
+//Details (select from user table) DONEE!
 function myAccount(){
-    if (isset($_SESSION['fname'])) 
-    {
-        $db_select = mysqli_select_db($conn, "users");
-        if(!$db_select){
-            die("Database selection failed ".mysqli_error($conn));
-    
-        }
-        else{
-            $query = "SELECT * FROM users WHERE user_id = '$id'";
-    
-            if ($result = $conn->query($query)) {
-                while ($row = $result->fetch_assoc()) {
+  include "conn.php";
+    if (isset($_SESSION['fname']))
+      $fname = $_SESSION['fname'];
+      ?>
+
+      <p><h3>Welcome <?php echo $fname; ?>!</h3></p><br/>
+
+      <?php
+
+      if (isset($_SESSION['uid'])){
+            $user_id = $_SESSION["uid"];
+            $query = "SELECT * FROM users WHERE user_id = '$user_id'";
+            $results = mysqli_query($con, $query);
+
+            if (mysqli_num_rows($results) == 1) {
+                    $row=mysqli_fetch_array($results);
                     $field1name = $row["email"];
                     $field2name = $row["fname"];
                     $field3name = $row["lname"];
@@ -101,9 +30,9 @@ function myAccount(){
                     $field6name = $row["street_2"];
                     $field7name = $row["zipcode"];
                     $field8name = $row["city"];
-                    $field9name = $row["states"];
+                    $field9name = $row["state"];
                     $field10name = $row["country"];
-    
+
                     echo "Email: <b>" .$field1name."</b><br/><br/>";
                     echo "Full name: <b>" .$field2name." ".$field3name."</b><br/><br/>";
                     echo "Contact number: <b>" .$field4name."</b><br/><br/><br/>";
@@ -116,93 +45,75 @@ function myAccount(){
                     echo "City: <b>" .$field8name. "</b><br/><br/>";
                     echo "State: <b>" .$field9name. "</b><br/><br/>";
                     echo "Country: <b>" .$field10name. "</b><br/><br/>";
-                }
             }
-        }
-    
-    }
+          }
 }
 
 
 //My recent order (select from order table) *nad
 function recentOrder(){
-    if (isset($_SESSION['fname'])) 
-    {
-        $db_select = mysqli_select_db($conn, "orders");
-        if(!$db_select){
-            die("Database selection failed ".mysqli_error($conn));
+    include "conn.php";
+          $user_id = $_SESSION["uid"];
+          $query = "SELECT * FROM orders WHERE user_id = '$user_id'";
+          $results = mysqli_query($con, $query);
+            if (mysqli_num_rows($results)>0) {
 
-        }
-        else{
-            $query = "SELECT * FROM orders WHERE user_id = '$id'";
-            if (mysqli_num_rows($query)>0) {
-
-                echo '<table margin-left="15%" border="0" cellspacing="5" cellpadding="5" text-align="center"> 
-                        <tr> 
-                            <td>Order Created  </td> 
-                            <td>Order ID  </td> 
-                            <td>Quantity  </td> 
-                            <td>Total (RM)</td> 
+                echo '<table margin-left="15%" border="0" cellspacing="5" cellpadding="5" text-align="center">
+                        <tr>
+                            <td>Order Created  </td>
+                            <td>Order ID  </td>
+                            <td>Quantity  </td>
+                            <td>Total (RM)</td>
                         </tr></table>';
 
-                if ($result = $conn->query($query)) {
+                if ($result = $con->query($query)) {
                     while ($row = $result->fetch_assoc()) {
                         $field1name = $row["order_time"];
                         $field2name = $row["order_id"];
                         $field3name = $row["quantity_order"];
                         $field4name = $row["total"];
 
-                        echo '<tr> 
-                                <td>'.$field1name.'</td> 
-                                <td>'.$field2name.'</td> 
-                                <td>'.$field3name.'</td> 
-                                <td>'.$field4name.'</td> 
+                        echo '<tr>
+                                <td>'.$field1name.'</td>
+                                <td>'.$field2name.'</td>
+                                <td>'.$field3name.'</td>
+                                <td>'.$field4name.'</td>
                             </tr>';
                     }
                     $result->free();
                 }
-            } 
+            }
             else{
                 echo "Your order is empty.";
             }
-        }
-
-    }
 }
 
 
 //Update my address (update user table) *nad
 if (isset($_POST['update_address'])) {
-    $db_select = mysqli_select_db($conn, "users");
-    if(!$db_select){
-        die("Database selection failed ".mysqli_error($conn));
 
-    }
-    else{
-        $sql = "UPDATE users SET street_1='$street1', street_2='$street2', zipcode='$zipcode', city='$city', 
-                states='$state', country='$country' where user_id = '$id'";
-        if(!mysqli_query($conn, $sql)){
-            die("Error update my address! ".mysqli_error($conn));
+        $sql = "UPDATE users SET street_1='$street1', street_2='$street2', zipcode='$zipcode', city='$city',
+                state='$state', country='$country' where user_id = '$user_id'";
+        if(!mysqli_query($con, $sql)){
+            die("Error update my address! ".mysqli_error($con));
 
         }else{
             echo "<script>alert('Succesfully update my address!')</script>";
             header('location: my-account.php');
         }
 
-    }
-
 }
 
-//*********** Sabrina ********************************
-//Add to cart - (insert into cart)
+
+//Add to cart - (insert into cart) *sab DONEE!
 if(isset($_POST["add"])){
 		$prod_id = $_POST["product_id"];
 
 		if(isset($_SESSION["uid"])){
   		$user_id = $_SESSION["uid"];
   		$sql = "SELECT * FROM cart WHERE product_id = '$prod_id' AND user_id = '$user_id'";
-  		$run_query = mysqli_query($con,$sql);
-  		$count = mysqli_num_rows($run_query);
+  		$run_query = mysqli_query($con,$sql); //find query
+  		$count = mysqli_num_rows($run_query); //how many rows
 
   		if($count > 0){
         echo '<script>alert("Product is already Added to Cart")</script>';
@@ -222,28 +133,45 @@ if(isset($_POST["add"])){
 }
 
 
-//Update - (update cart :qty) *sab
+//Update - (update cart :qty) *sab DONEE!
+if (isset($_POST["updateCartItem"])){
+  if (isset($_SESSION["uid"])) {
+    $update_id = $_POST["update_id"];
+    $qty = $_POST["update_qty"];
+    $user_id = $_SESSION["uid"];
+    $sql = "UPDATE cart SET quantity='$qty' WHERE product_id = '$update_id' AND user_id = '$user_id'";
+  }
 
+  if(mysqli_query($con,$sql)){
+    header('location: cart.php');
+  }
+}
 
+//Delete product - (delete from cart) *sab DONEE!
+if (isset($_POST["delete"])){
+	$remove_id = $_POST["remove_id"];
+  echo "delete";
+  echo "$remove_id";
+	if (isset($_SESSION["uid"])){
+		$sql = "DELETE FROM cart WHERE product_id = '$remove_id' AND user_id = '$_SESSION[uid]'";
+	}
 
-//Delete product - (delete from cart) *sab
-
-
+	if(mysqli_query($con,$sql)){
+    header('location: cart.php');
+	}
+}
 
 //Checkout - (select from user : details) *sab
+if(isset($_POST["checkout"])){
+		$prod_id = $_POST["product_id"];
+}
 
+//Before place order - (insert into orders, product_order) *shakina
 
-//*************** Shakina **********************************
-//Before place order - (insert into orders, product_order)
-
-
-//*************** Alyaa ************************************
-//After place order - (delete uid from cart)
-
+//After place order - (delete uid from cart) *alyaa
 
 //Logout - Destroy session uid *alyaa
 
 
-
-
 ?>
+
