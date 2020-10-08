@@ -6,7 +6,7 @@ padding:5px;
 text-align:left;
 }
 
-div#details { 
+div#details {
     text-align: 100px left;
 }
 
@@ -35,7 +35,7 @@ text-align: left;
 cursor: pointer;
 transition: 0.3s;
 }
-  
+
 /* Change background color of buttons on hover */
 div#tab li:hover {
 background-color: #ffdcba;
@@ -78,31 +78,33 @@ textarea{
 width:250px;
 height:60px;
 border-radius:1px;
-box-shadow:0 0 1px 2px #123456;
+box-shadow:0 0 1px 2px #ebb580;
 margin-top:10px;
 padding:5px 0;
 border:none
 }
+
 .input{
 width:250px;
 height:15px;
 border-radius:1px;
-box-shadow:0 0 1px 2px #123456;
+box-shadow:0 0 1px 2px #bb4c71;
 margin-top:10px;
 padding:5px 0;
 border:none;
 margin-bottom:20px
 }
+
 .submit{
 color:#fff;
 border-radius:3px;
-background:#1F8DD6;
+background:#ebb580;
 padding:5px;
 margin-top:40px;
 border:none;
 width:100px;
 height:30px;
-box-shadow:0 0 1px 2px #123456;
+box-shadow:0 0 1px 2px #b8315e;
 font-size:16px
 }
 
