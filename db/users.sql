@@ -33,10 +33,10 @@ CREATE TABLE `users` (
   `lname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `contact_num` varchar(10) NOT NULL,
+  `contact_num` varchar(6) NOT NULL,
   `street_1` varchar(100) NOT NULL,
   `street_2` varchar(100) NOT NULL,
-  `zipcode` int(50) NOT NULL,
+  `zipcode` varchar(6) NOT NULL,
   `city` varchar(50) NOT NULL,
   `state` varchar(50) NOT NULL,
   `country` varchar(50) NOT NULL
