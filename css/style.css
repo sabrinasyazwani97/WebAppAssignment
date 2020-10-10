@@ -203,7 +203,7 @@ nav li a:hover, nav li .active {
 .main-grid-item-1 {
     height: 100%;
     width: 100%;
-    background-image: url("images/home1.jpg");
+    background-image: url("home1.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -228,7 +228,7 @@ nav li a:hover, nav li .active {
 .main-grid-item-4 {
     height: 100%;
     width: 100%;
-    background-image: url("images/home2.jpeg");
+    background-image: url("home2.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -419,13 +419,13 @@ input[type="submit"]:hover {
 }
 
 .promo-item-1 {
-    background-image: url("images/pins.jpg");
+    background-image: url("pins.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .promo-item-2 {
-    background-image: url("images/merdeka-sale.png");
+    background-image: url("merdeka-sale.png");
     background-size: cover;
     background-position: center;
 }

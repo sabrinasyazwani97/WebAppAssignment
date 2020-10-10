@@ -1,9 +1,16 @@
+article.update-address, article.recent-order, article.account{
+    background-color: #f5cd79;
+    text-align: center;
+    margin: 0 auto;
+}
+
 div#page {
+max-width: 1500px;
 border:0px solid black;
-width:90%;
+width:100%;
 margin:0 auto;
 padding:5px;
-text-align:left;
+text-align:center;
 }
 
 div#details {
@@ -78,33 +85,35 @@ textarea{
 width:250px;
 height:60px;
 border-radius:1px;
-box-shadow:0 0 1px 2px #ebb580;
+box-shadow:0 0 1px 2px #123456;
 margin-top:10px;
 padding:5px 0;
 border:none
 }
 
 .input{
-width:250px;
-height:15px;
-border-radius:1px;
-box-shadow:0 0 1px 2px #bb4c71;
-margin-top:10px;
-padding:5px 0;
-border:none;
-margin-bottom:20px
+  background-color: #d3d9de;
+	opacity: .80;
+  border: hidden;
+  height: 3em;
+  padding: 0.5em;
+  font-size: 1em;
+  color: black;
+  margin: 0.5em;
+  width: 15em;
+
 }
 
 .submit{
 color:#fff;
 border-radius:3px;
-background:#ebb580;
+background:#1F8DD6;
 padding:5px;
 margin-top:40px;
 border:none;
 width:100px;
 height:30px;
-box-shadow:0 0 1px 2px #b8315e;
+box-shadow:0 0 1px 2px #123456;
 font-size:16px
 }
 
@@ -115,5 +124,5 @@ clear:both
 div#content table{
     border:1px;
     border-spacing:4px;
-    text-align:center;
+    text-align:left;
 }

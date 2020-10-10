@@ -18,7 +18,7 @@ article.cart{
   text-align: center;
 }
 
-.checkoutBtn, .code-submit, .returnBtn{
+.bttn, .checkoutBtn, .code-submit, .returnBtn{
   margin-top: 1em;
   background-color: #bb4c71;
 	opacity: .99;
@@ -30,7 +30,7 @@ article.cart{
   font-weight: bold;
 }
 
-.checkoutBtn:hover, .code-submit:hover, .returnBtn:hover{
+.bttn:hover, .checkoutBtn:hover, .code-submit:hover, .returnBtn:hover{
   cursor: pointer;
 	background-color: #ffdcba;
 	border: 1px solid #ffdcba;
@@ -45,7 +45,7 @@ td button{
   align-items: stretch;
 }
 
-td input{
+.couponText{
   border-style: 1px solid #D6DBDF;
   width: 20em;
   font-size: 100%;
@@ -74,12 +74,12 @@ tr{
   height: 4em;
 }
 
-.update-qty{
+.update_cart{
+  border-style: 1px solid #D6DBDF;
   width: 3em;
-  background-color: #bb4c71;
-	opacity: .99;
-  color: white;
-  border: 3px solid black;
+  font-size: 100%;
+  height: 2em;
+  margin-top: 1em;
 }
 
 #col1{

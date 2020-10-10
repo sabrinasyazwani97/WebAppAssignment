@@ -46,6 +46,24 @@ article.checkout{
   padding: 0.2em;
 }
 
+td #col-mid{
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 1px solid #D6DBDF;
+  text-align: center;
+  font-size: 1em;
+  width: 20em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+td #col-pay{
+  text-align: center;
+  font-size: 1em;
+  width: 20em;
+  padding-top: 1em;
+}
+
 .add-line1, .add-line2, .tel-no, .email-add, .remarks{
   background-color: #d3d9de;
 	opacity: .80;
@@ -54,7 +72,7 @@ article.checkout{
   padding: 0.5em;
   font-size: 1em;
   color: black;
-  margin: 0.5em;
+  margin: 0;
   width: 31.5em;
 }
 
@@ -66,7 +84,7 @@ article.checkout{
   padding: 0.5em;
   font-size: 1em;
   color: black;
-  margin: 0.5em;
+  margin: 0;
   width: 15em;
 }
 
