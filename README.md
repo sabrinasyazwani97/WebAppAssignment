@@ -4,7 +4,7 @@
 
 
 PROJECT TITLE: 
-Herzig Chess 
+Scarf4u - Ladies Fashion Online Store
 
 PURPOSE OF PROJECT: 
 TIS2151 Web Application Development
