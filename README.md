@@ -12,9 +12,6 @@ TIS2151 Web Application Development
 VERSION or DATE: 
 October 2020
 
-HOW TO START THIS PROJECT: 
--
-
 AUTHORS: 
 1. Nur Sabrina Syazwani binti Mazlan 
 2. Nurul Nadiah binti Zulkifli
